@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <h1>Predict</h1>
+    </title>
+</head>
+
+<body>
+    <a class="nav-link" href="{% url 'home'%}">
+        <h1>Home</h1>
+    </a>
+    <h3>Please the data below are the history of students predicted performance</h3>
+    <h1>Predict Results</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Pstatus</th>
+                <th>Reason</th>
+                <th>Studytime</th>
+                <th>Failures</th>
+                <th>Internet</th>
+                <th>Freetime</th>
+                <th>G1</th>
+                <th>G2</th>
+                <th>G3</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {%for i in predicts %}
+            <tr>
+                <td>{{i.Pstatus}}</td>
+                <td>{{i.reason}}</td>
+                <td>{{i.studytime}}</td>
+                <td>{{i.failures}}</td>
+                <td>{{i.internet}}</td>
+                <td>{{i.freetime}}</td>
+                <td>{{i.G1}}</td>
+                <td>{{i.G2}}</td>
+                <td>{{i.classification}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
+
+</html>

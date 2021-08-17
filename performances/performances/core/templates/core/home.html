@@ -1,0 +1,24 @@
+ {% load static %} {% load crispy_forms_tags%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    <link rel="stylesheet" href="{% static 'style.css' %} ">
+</head>
+
+<body>
+    <a class="nav-link " href="{% url 'login'%} ">
+        <h1>View Database</h1>
+    </a>
+    <h2>Please enter details below to know your expected performance</h2>
+    <form action=" " method="post ">
+        {% csrf_token %} {{form|crispy}}
+        <input type="submit" name="submit" id="">
+    </form>
+</body>
+
+</html>
